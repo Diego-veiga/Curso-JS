@@ -1,6 +1,7 @@
 let nome = "super man";
 let idade =100;
 let poder = "super força";
+let casado = true;
 
 
 console.log(

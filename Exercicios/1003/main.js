@@ -8,7 +8,7 @@ elementButton.onclick = ()=>{
     v2 = Number(elementInput2.value);
     
     let final = Calculamedia(v1, v2)
-   alert(final);
+    alert(`Sua media final é:${final}`);
 
 
 }

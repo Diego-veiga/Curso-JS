@@ -8,8 +8,11 @@ console.log(minhaListaDeTarefas[0])
 console.log(minhaListaDeTarefas[1])
 console.log(minhaListaDeTarefas[4])
 
+//tamanho do array
+console.log(`quantidade de itens no array`,minhaListaDeTarefas.length)
 
-//adicionar item na lista 
+
+//adicionar item na lista  
 console.log('--------adicionar item na lista -----------')
 minhaListaDeTarefas.push('formatar computador');
 console.log(minhaListaDeTarefas);

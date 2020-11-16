@@ -20,5 +20,6 @@ const pessoa ={
 }
 pessoa.nome= "Diego Veiga"
 console.log(pessoa.nome)
+pessoa.idade=14
 console.log(pessoa.podeDirigir)
 console.log(pessoa.idade)

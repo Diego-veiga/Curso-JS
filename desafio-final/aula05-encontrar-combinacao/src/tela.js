@@ -1,14 +1,18 @@
 const ID_CONTEUDO ="conteudo"
+const ID_BTN_JOGAR = "jogar"
 class Tela{
     static obterCodigoHtml(item){
         return `
         <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 50%;" onclick="window.verificarSelecao('${item.id}','${item.nome}')">
                 <img src="${item.img}"  name="${item.nome} class="card-img-top" alt="...">
             </div>
             <br/>
           </div>
         `
+    }
+    static configurarBotaoVerificarSelecao(funcaoOnclick){
+        window.verificarSelecao =  funcaoOnclick        
     }
     static aleterarCOnteudoHTML(codigoHtml){
         const conteudo = document.getElementById(ID_CONTEUDO)
@@ -24,6 +28,19 @@ class Tela{
     static atualizarImagens(itens){
         const codigoHtml = Tela.gerarStringHtmlPelaImagem(itens)
         Tela.aleterarCOnteudoHTML(codigoHtml)
+    }
+
+    static configurarBotaoJogar(funcaoClick){
+        
+        const btnJogar = document.getElementById(ID_BTN_JOGAR)
+        btnJogar.onclick=funcaoClick
+    }
+
+    static exibirHerois(nomeDoHeroi, img){
+        const elementoHtml = document.getElementsByName(nomeDoHeroi)
+        //para cada element econtrado na tela, vamos aletar a imagem para imagem inicial dele 
+        //com o forEach, para cada item, de tro do ( setamos um valor)
+        elementoHtml.forEach(item =>(item.src = img))
     }
 
 }

@@ -18,5 +18,26 @@ class jogoDaMemoria{
         //vai pegar todas as funcoes da classetela!
         //colcoa todos os herois na tela
         this.tela.atualizarImagens(this.heroiIniciais)
+        this.tela.configurarBotaoJogar(this.jogar.bind(this))
+    }
+
+    embaralhar(){
+        const copias = this.heroiIniciais
+        //duplicar herois
+        .concat(this.heroiIniciais)
+      
+
+        //entrar nos objectos e embaralhar
+        .map(item=>{
+            return Object.assign({}, item, {id: Math.random()/0.5})
+        })
+        .sort(()=> Math.random()-0.5)
+      
+        
+        this.tela.atualizarImagens(copias)
+    }
+    jogar(){
+        
+        this.embaralhar()
     }
 }

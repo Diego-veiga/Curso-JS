@@ -17,12 +17,12 @@ console.log(heroi)
 console.log(Object.keys(heroi))
 
 //saber valores 
-console.log(Object.vales(heroi))
+console.log(Object.values(heroi))
 const passoa ={
     tamanho: '10 metros'
 }
 
 const novoObj = Object.assign(heroi, passoa)
 delete novoObj.nome
-console.log(novoObj)
+console.log('NOVO OBJETO',novoObj)
 
